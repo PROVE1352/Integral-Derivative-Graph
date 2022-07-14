@@ -1,17 +1,14 @@
+import imp
 from numbers import Integral
 from unittest import result
 import matplotlib.pyplot as plt
 from scipy.misc import derivative
 from scipy import integrate
 import numpy as np
-
-def function(x):
-	return x**3 + 2*x**2 - 4*x - 2  
+from setting import * 
 
 def deriv(x):
 	return derivative(function, x)
-
-y = np.linspace(-6, 6, 100)
 
 integrals = []
 x_range = []

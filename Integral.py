@@ -1,15 +1,10 @@
+import imp
 from numbers import Integral
+from typing import Set
 import matplotlib.pyplot as plt
 from scipy import integrate
 import numpy as np
-
-def function(x):
-	return x**3 + 2*x**2 - 4*x - 2  
-
-def deriv(x):
-	return derivative(function, x)
-
-y = np.linspace(-6, 6, 100)
+from setting import * 
 
 integrals = []
 x_range = []
@@ -21,7 +16,6 @@ for i in y:
     integrals.append(integral)
 
 plt.plot(y, function(y), color='purple', label='Function')
-plt.plot(y, deriv(y), color='green', label='Derivative')
 plt.plot(y, integrals, color='blue',label='Integral ')
 plt.legend(loc='upper left')
 plt.grid(True)
